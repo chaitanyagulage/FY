@@ -1,16 +1,20 @@
-#Create a Set
-setA = {1, 2, 3, 4, 5}
-setB = {4, 5, 6, 7, 8}
-print("Set A:", setA)
-print("Set B:", setB)
-#Acessing set items and union, intersection, difference of Sets
-for item in setA:
-    print("Item in Set A:", item)
-for item in setB:
-    print("Item in Set B:", item)
-unionSet = setA | setB
-print("Union of Set A and Set B:", unionSet)
-intersectionSet = setA&setB
-print("Intersection of Set A and Set B:", intersectionSet)
-differenceSet = setA-setB
-print("Difference of Set A and Set B (A - B):", differenceSet)
+#Create a List
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+#Access elements in the List
+print("First Element:", my_list[0])
+print("Last Element:", my_list[-1])
+#Print the length of the List
+print("Length of list:", len(my_list))
+#Add an element to the List
+my_list.append(6)
+print("After Adding 6:", my_list)
+#Remove an element from the List
+my_list.remove(3)
+print("After Removing 3:", my_list)
+#Sort the List
+my_list.sort()
+print("Sorted List:", my_list)
+#Reverse the List
+my_list.reverse()
+print("Reversed List:", my_list)

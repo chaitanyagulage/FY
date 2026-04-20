@@ -1,2 +1,2 @@
 def convert(celsius):
-    return celsius + 273.15
+    return (celsius * 9/5) + 32

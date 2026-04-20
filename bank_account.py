@@ -1,14 +1,16 @@
-#Create a Tuple
-t1 = (10, 20, 30)
-#Acess elements 
-print("First Element:", t1[0])
-print("Last Element:", t1[-1])
-#Nested Tuple
-t2 = (1, 2, (3, 4))
-print("Nested Tuple:", t2)
-#Repetition of Tuple
-t3 = (t1*2)
-print("Repeated Tuple:", t3)
-#Concatenated of Tuple
-t4 = t1+(40, 50)
-print("Concatenated Tuple:", t4)
+#Create a Set
+setA = {1, 2, 3, 4, 5}
+setB = {4, 5, 6, 7, 8}
+print("Set A:", setA)
+print("Set B:", setB)
+#Acessing set items and union, intersection, difference of Sets
+for item in setA:
+    print("Item in Set A:", item)
+for item in setB:
+    print("Item in Set B:", item)
+unionSet = setA | setB
+print("Union of Set A and Set B:", unionSet)
+intersectionSet = setA&setB
+print("Intersection of Set A and Set B:", intersectionSet)
+differenceSet = setA-setB
+print("Difference of Set A and Set B (A - B):", differenceSet)

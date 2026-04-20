@@ -1,55 +1,27 @@
-#Parent class 1
-
-class Person:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-        
-
-    def display_person(self):
-            print(f"Name:{self.name}")
-            print(f"Age:{self.age}")
-
-#Parent class2
-class Employee:
-    def __init__(self,emp_id,salary):
-        self.emp_id=emp_id
-        self.salary=salary
-
-    def display_employee(self):
-        print(f"Employee ID:{self.emp_id}")
-        print(f"Salary:Rs{self.salary}")
-
-#Child class inheriting from Person and Employeee
-class Manager(Person, Employee):
-    def __init__(self, name , age , emp_id, salary , department):
-        #Initialize parent classes
-        Person.__init__(self,name,age)
-        Employee.__init__(self,emp_id,salary)
-
-
-        #Manager-sspecific attribute
-        self.department = department
-
-#Manager-specific method
-    def display_manager(self):
-        print ("\n---Manager Details ---")
-        self.display_person()
-        self.display_employee()
-        print(f"Department:{self.department}")
-
-
-    def conduct_meeting(self):
-        print(f"{self.name} is conducting a meeting for the {self.department}")
-
-
-#Creating object of Manager class
-manager1=Manager("ABC",35,"1000",9500,"IT")
-manager1.display_manager()
-manager1.conduct_meeting()
-
-
-                      
-
-
-
+#Bank Account
+class BankAccount:
+    def __init__(self, account_no, balance=0.00):
+        self.account_no = account_no
+        self.balance = balance
+    def deposit(self, amount):
+        if amount >=0:
+            self.balance+=amount
+            print(f"Deposited: Rs.{amount}. New balance: Rs.{self.balance}")
+        else:
+            print("Deposited amount must be positive.")
+    def withdrawal(self, amount):
+        if amount >0:
+            if amount <= self.balance:
+                self.balance-=amount
+                print(f"Withdrawal: Rs.{amount}.Remaining Balance: Rs.{self.balance}")
+            else:
+                print("Insufficient Balance.")
+        else:
+            print("Withdrawal amount must be positive.")
+    def check_balance(self):
+        print(f"Account No.: {self.account_no}")
+        print(f"Current Balance: {self.balance}")
+Account=BankAccount("SBI1234", 10000)
+Account.deposit(500)
+Account.withdrawal(100)
+Account.check_balance()
